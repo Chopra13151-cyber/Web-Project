@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hunger Hub | Order Confirmed! 🥳</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+  <!-- use static paths served from /public -->
+  <link rel="stylesheet" href="/css/confirmation_style.css">
+</head>
+<body>
+
+  <!-- optional: include header (nav) -->
+  <%- include('partials/header') %>
+
+  <header class="order-banner">
+    <p>
+      🎉 Payment Successful! Your <strong>Hunger Hub</strong> order is confirmed — we are cooking with joy! 🍔 Enjoy the gourmet experience! 🥳
+    </p>
+  </header>
+
+  <div class="main-container">
+    <section class="confirmation-box">
+      <h2 class="thank-you-message">Thank You for Your Order!</h2>
+      <p>Your order number <strong>#HH-8756</strong> is on its way. Estimated delivery time: <strong>30 minutes</strong>.</p>
+
+      <div class="delivery-details">
+        <span class="detail-item">Estimated Time: <span id="eta">30 min</span></span>
+        <span class="detail-item">Total Paid: <span id="totalPaid">Rs. 420.00</span></span>
+        <span class="detail-item">Payment Method: <span id="paymentMethod">Card ending 4444</span></span>
+      </div>
+    </section>
+
+    <section class="feedback-box">
+      <h3 class="feedback-title">⭐ Rate and Review Your Experience ⭐</h3>
+
+      <form id="feedbackForm">
+        <div class="form-group">
+          <label for="name">Your Name:</label>
+          <input type="text" id="name" placeholder="Enter your name" required>
+        </div>
+
+        <div class="form-group rating-group">
+          <label>Rate Our Service:</label>
+          <div class="stars" id="starContainer"></div>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Your Feedback:</label>
+          <textarea id="message" rows="4" placeholder="Tell us what you loved about the food and service..."></textarea>
+        </div>
+
+        <button type="submit" class="btn submit-btn">Submit Feedback</button>
+
+        <p class="error-message" id="errorMessage">⚠ Please ensure your name is entered and a star rating is selected!</p>
+
+        <p class="thank-message" id="thank">😊 Thank you for your feedback! It helps us serve you better. 🍕</p>
+      </form>
+    </section>
+
+    <section class="gallery-section">
+      <h3>Recent Delights From Our Kitchen</h3>
+      <div class="food-gallery" id="foodGallery"></div>
+    </section>
+
+    <a href="/#home" class="btn back-to-home">Back to Home Page</a>
+  </div>
+
+  <!-- include footer partial -->
+  <%- include('partials/footer') %>
+
+  <!-- static JS file served from /public -->
+  <script src="/js/confirmation_data.js"></script>
+</body>
+</html>

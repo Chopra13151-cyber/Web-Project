@@ -1,0 +1,252 @@
+
+:root {
+    --primary-color: #e74c3c;
+    --secondary-color: #f1c40f; 
+    --background-light: #fef5f4; 
+    --background-gradient: linear-gradient(135deg, #f7f9fc, #f1e9e7);
+    --text-dark: #2c3e50;
+    --text-light: #ffffff;
+    --shadow-heavy: rgba(0, 0, 0, 0.2);
+    --shadow-light: rgba(0, 0, 0, 0.08);
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', Arial, sans-serif;
+    background: var(--background-gradient); 
+    color: var(--text-dark);
+    text-align: center;
+    line-height: 1.6;
+}
+
+.order-banner {
+    background: var(--primary-color);
+    padding: 15px 0; 
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text-light);
+    box-shadow: 0 2px 10px var(--shadow-heavy);
+    white-space: nowrap;
+    overflow: hidden; 
+}
+
+.order-banner p {
+    margin: 0;
+    padding: 0;
+}
+
+.main-container {
+    width: 90%;
+    max-width: 900px;
+    margin: 40px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.confirmation-box, .feedback-box, .gallery-section {
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px var(--shadow-light);
+    text-align: left;
+}
+
+.confirmation-box {
+    background: #e6f7ff; 
+    border: 1px solid #cceeff;
+}
+.thank-you-message {
+    color: var(--primary-color);
+    font-size: 32px;
+    margin-bottom: 10px;
+    font-family: 'Great Vibes', cursive; 
+    text-align: center;
+}
+.confirmation-box p {
+    text-align: center;
+    font-size: 17px;
+    margin-bottom: 20px;
+}
+.delivery-details {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 10px 0;
+    border-top: 1px dashed #ddd;
+    border-bottom: 1px dashed #ddd;
+}
+.detail-item {
+    font-weight: 600;
+    color: #555;
+    margin: 5px 10px;
+}
+.detail-item span {
+    color: var(--text-dark);
+    font-weight: 700;
+}
+
+
+.feedback-box {
+    text-align: center;
+}
+.feedback-title {
+    color: var(--text-dark);
+    margin-bottom: 25px;
+    font-size: 24px;
+}
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #555;
+}
+
+input[type="text"], textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    box-sizing: border-box; 
+    transition: border-color 0.3s;
+}
+input[type="text"]:focus, textarea:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+
+.rating-group {
+    text-align: center;
+}
+.stars button {
+    background: none;
+    border: none;
+    font-size: 35px;
+    cursor: pointer;
+    color: #0aaa15;
+    transition: 0.3s ease-in-out;
+    padding: 0 5px;
+}
+.stars button:hover {
+    color: #4ad16c;
+}
+.stars button.active {
+    color: rgb(211, 97, 3);
+    transform: scale(1.1);
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: 0.3s;
+    cursor: pointer;
+    border: none;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.submit-btn {
+    background: var(--primary-color);
+    color: var(--text-light);
+    width: 100%;
+    max-width: 300px;
+}
+.submit-btn:hover {
+    background: #c0392b;
+}
+.submit-btn:disabled {
+    background: #aaa;
+    cursor: not-allowed;
+}
+
+.back-to-home {
+    background: #3498db; 
+    color: var(--text-light);
+    margin: 20px auto;
+}
+.back-to-home:hover {
+    background: #2980b9;
+}
+
+.thank-message, .error-message {
+    font-weight: bold;
+    display: none;
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 17px;
+}
+
+.thank-message {
+    color: green;
+    background: #e6ffe6;
+    border: 1px solid #4CAF50;
+}
+
+.error-message {
+    color: #D8000C; 
+    background: #FFD2D2;
+    border: 1px solid #D8000C;
+}
+
+
+.gallery-section h3 {
+     color: var(--text-dark);
+}
+.food-gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 20px;
+}
+.food-gallery img {
+    width: 100%;
+    max-width: 200px; 
+    height: 150px;
+    border-radius: 10px;
+    object-fit: cover;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transition: transform 0.3s;
+}
+.food-gallery img:hover {
+    transform: scale(1.05);
+}
+
+footer {
+    background: var(--text-dark);
+    color: #bdc3c7; 
+    padding: 15px;
+    font-size: 14px;
+    margin-top: 40px;
+}
+
+
+@media (max-width: 600px) {
+    .order-banner {
+        font-size: 16px;
+        white-space: normal;
+    }
+    .confirmation-box, .feedback-box, .gallery-section {
+        padding: 20px;
+    }
+    .thank-you-message {
+        font-size: 26px;
+    }
+    .delivery-details {
+        flex-direction: column;
+    }
+    .food-gallery img {
+        max-width: 100%;
+    }
+}

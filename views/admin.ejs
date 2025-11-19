@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Hunger Hub - Admin</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <style>
+    /* small admin-specific styles */
+    .admin-wrap { max-width:1100px; margin:30px auto; padding:20px; }
+    .admin-grid { display:flex; gap:20px; align-items:flex-start; }
+    .admin-list { flex:1; }
+    .admin-form { width:360px; background:#fff; padding:16px; border-radius:8px; box-shadow:0 6px 18px rgba(0,0,0,.05); }
+    .admin-item { display:flex; gap:12px; padding:10px; border-bottom:1px solid #eee; }
+    .admin-item img{ width:80px; height:60px; object-fit:cover; border-radius:6px; }
+    .small-btn{ padding:6px 10px; margin-left:8px; font-size:13px; cursor:pointer; border-radius:6px; }
+    .btn-edit{ background:#f39c12; color:#fff; border:none; }
+    .btn-delete{ background:#e74c3c; color:#fff; border:none; }
+    .form-row{ margin-bottom:8px; }
+    label{ display:block; font-weight:600; margin-bottom:6px; }
+    input, textarea { width:100%; padding:8px; border:1px solid #ddd; border-radius:6px; }
+    .modal { position:fixed; inset:0; display:none; align-items:center; justify-content:center; background:rgba(0,0,0,.4); }
+    .modal.show { display:flex; }
+    .modal-box { width:480px; max-width:95%; background:#fff; padding:16px; border-radius:8px; }
+  </style>
+</head>
+<body>
+  <%- include('partials/header') %>
+
+  <div class="admin-wrap">
+    <h2>Admin — Manage Menu Items (CRUD)</h2>
+    <div class="admin-grid">
+      <!-- list -->
+      <div class="admin-list">
+        <h3>Menu Items</h3>
+        <div id="itemsList">
+          <!-- items inserted here -->
+        </div>
+      </div>
+
+      <!-- create form -->
+      <div class="admin-form">
+        <h3>Create New Item</h3>
+        <div class="form-row">
+          <label for="a_name">Name</label>
+          <input id="a_name" placeholder="Dish name">
+        </div>
+        <div class="form-row">
+          <label for="a_image">Image URL</label>
+          <input id="a_image" placeholder="https://...">
+        </div>
+        <div class="form-row">
+          <label for="a_price">Price</label>
+          <input id="a_price" placeholder="Rs100">
+        </div>
+        <div class="form-row">
+          <label for="a_link">Link</label>
+          <input id="a_link" placeholder="#location">
+        </div>
+        <div class="form-row">
+          <label for="a_desc">Description</label>
+          <textarea id="a_desc" rows="3"></textarea>
+        </div>
+        <div>
+          <button id="createBtn" class="btn primary-btn">Create Item</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- edit modal -->
+  <div class="modal" id="editModal">
+    <div class="modal-box">
+      <h3>Edit Item</h3>
+      <input id="e_id" type="hidden">
+      <div class="form-row"><label>Name</label><input id="e_name"></div>
+      <div class="form-row"><label>Image URL</label><input id="e_image"></div>
+      <div class="form-row"><label>Price</label><input id="e_price"></div>
+      <div class="form-row"><label>Link</label><input id="e_link"></div>
+      <div class="form-row"><label>Description</label><textarea id="e_desc" rows="3"></textarea></div>
+      <div style="text-align:right;">
+        <button id="closeModal" class="small-btn">Cancel</button>
+        <button id="saveEdit" class="small-btn btn-edit">Save</button>
+      </div>
+    </div>
+  </div>
+
+  <%- include('partials/footer') %>
+  <script src="/js/admin.js"></script>
+</body>
+</html>

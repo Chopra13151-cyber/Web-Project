@@ -1,0 +1,49 @@
+{
+    "menuItems": [
+        { 
+            "name": "Gourmet Cheeseburger", 
+            "price": "Rs180",
+            "image": "https://raw.githubusercontent.com/programmercloud/foodlover/main/img/menu-5.jpg", 
+            "link": "#location" 
+        },
+        { 
+            "name": "Hyderabadi Biryani", 
+            "price": "Rs250", 
+            "image": "https://raw.githubusercontent.com/programmercloud/foodlover/main/img/menu-3.jpg", 
+            "link": "#location" 
+        },
+        { 
+            "name": "Margherita Pizza Slice", 
+            "price": "Rs420", 
+            "image": "https://raw.githubusercontent.com/programmercloud/foodlover/main/img/menu-1.jpg", 
+            "link": "#location" 
+        },
+        { 
+            "name": "Classic French Fries", 
+            "price": "Rs90", 
+            "image": "https://raw.githubusercontent.com/programmercloud/foodlover/main/img/menu-2.jpg", 
+            "link": "#location" 
+        },
+        { 
+            "name": "Chocolate Lava Cake", 
+            "price": "Rs150", 
+            "image": "https://raw.githubusercontent.com/programmercloud/foodlover/main/img/menu-4.jpg", 
+            "link": "#location" 
+        },
+        { 
+            "name": "Spicy Chicken Wings", 
+            "price": "Rs200", 
+            "image": "https://github.com/programmercloud/foodlover/blob/main/img/home-banner.png?raw=true", 
+            "link": "#payment" 
+        }
+    ],
+    "serviceZones": [
+        { "name": "Gurugram", "zipCode": "122001", "keywords": ["gurugram", "ggn"], "time": "30-45 minutes" },
+        { "name": "Munjal University Area", "zipCode": "123456", "keywords": ["munjal", "123456"], "time": "20-30 minutes" }
+    ],
+    "cardTypes": [
+        { "name": "Visa", "prefix": "^4" },
+        { "name": "MasterCard", "prefix": "^5[1-5]" },
+        { "name": "Amex", "prefix": "^3[47]" }
+    ]
+}

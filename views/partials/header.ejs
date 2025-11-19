@@ -1,0 +1,17 @@
+<nav>
+  <div class="logo">HUNGERHUB</div>
+  <ul>
+    <li><a href="/">Home</a></li>
+    <li><a href="/#menu">Menu</a></li>
+    <li><a href="/#location">Location</a></li>
+    <li><a href="/#payment">Checkout</a></li>
+
+    <% if (currentUser) { %>
+      <li><a href="/admin" class="nav-btn">Admin</a></li>
+      <li style="margin-left:12px">Hello, <strong><%= currentUser.name %></strong></li>
+      <li><a href="/auth/logout">Logout</a></li>
+    <% } else { %>
+      <li><a href="/auth/login" class="nav-btn">Login</a></li>
+    <% } %>
+  </ul>
+</nav>

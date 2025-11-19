@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hunger Hub | Food Delivery</title>
+  <!-- static files served from /public -->
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+  <!-- include the shared navigation -->
+  <%- include('partials/header') %>
+
+  <!-- === Main content (your original markup) === -->
+  <section class="section hero" id="home">
+    <div class="hero-content">
+      <h1>Craveable Meals,  Delivered Fast</h1>
+      <p>From sizzling grills to comforting desserts, we bring your next great meal right to your doorstep. Fresh, hot, and satisfying.</p>
+      <a href="#menu" class="btn primary-btn">Order Now 🚀</a>
+    </div>
+    <img src="https://github.com/programmercloud/foodlover/blob/main/img/home-banner.png?raw=true" alt="A variety of delicious foods on a platter" class="hero-image">
+  </section>
+
+  <section class="section about-section" id="about">
+    <div class="about-content">
+      <div style="max-width: 50%;">
+        <h2>Our Story and Promise</h2>
+        <p>At Hunger Hub , we believe great food shouldn't be a luxury. Born from a passion for quality and speed, we partner with the finest local chefs and restaurants. Our mission is simple: deliver diverse, high-quality, and freshly prepared meals in the shortest time possible, without compromising the taste or the experience.</p>
+        <p>We started Hunger Hub as a small idea in a big city, driven by the challenge of getting truly hot, restaurant-quality food delivered quickly. We meticulously built a proprietary logistics network that focuses on efficiency and food integrity from the moment the order is placed until it reaches your hands.</p>
+        <p><strong>Quality Assurance:</strong> Every dish is prepared to stringent standards and delivered in insulated packaging to ensure it arrives as hot and fresh as if you cooked it yourself. We regularly inspect our partner kitchens to ensure the highest levels of hygiene and ingredient freshness.</p>
+        <p><strong>Community Focus:</strong> We're not just a delivery service; we're a hub connecting you to the best of your local food scene. We take pride in supporting small businesses and independent restaurants.</p>
+        <p style="font-weight: bold; color: #e74c3c; margin-top: 20px;">Hunger Hub was founded by three food enthusiasts and entrepreneurs: <strong>Aarav, Aniket, and Krishan</strong>, who remain committed to delivering happiness, one meal at a time.</p>
+      </div>
+      <img src="https://raw.githubusercontent.com/programmercloud/foodlover/main/img/menu-4.jpg" alt="Chef preparing food in a kitchen" class="about-image">
+    </div>
+  </section>
+
+  <section class="section menu-section" id="menu">
+    <h2>🔥 Our Bestsellers</h2>
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="Search delicious dishes..." required>
+    </div>
+    <div class="menu-grid" id="menuGrid"></div>
+  </section>
+
+  <section class="section location-section" id="location">
+    <h2>📍 Locate Your Delivery Zone</h2>
+    <div class="location-form-box">
+      <p>Enter your address details to check service availability and delivery time.</p>
+      <form id="locationForm">
+        <input type="text" id="streetAddress" placeholder="Street Address / Building Name" required>
+        <input type="text" id="cityZip" placeholder="City and Zip Code" required>
+        <button type="submit" class="btn primary-btn" id="checkLocationBtn">Check Availability</button>
+      </form>
+      <div id="locationResult" class="location-result"></div>
+    </div>
+  </section>
+
+  <section class="section payment-section" id="payment">
+    <form class="form-box" id="paymentForm">
+      <h2>💳 Secure Checkout</h2>
+      <h3>Billing Details</h3>
+      <input type="text" id="name" placeholder="Full Name (e.g., Aarav Chopra)" required>
+      <input type="text" id="address" placeholder="Delivery Address (e.g., Munjal University)" required>
+      <div class="form-row">
+        <input type="text" id="city" placeholder="City" required>
+        <input type="text" id="zip" placeholder="Zip Code" required>
+      </div>
+      <hr>
+      <h3>Payment Information</h3>
+      <input type="text" id="cardNumber" placeholder="Card Number (XXXX XXXX XXXX XXXX)" maxlength="19" required>
+      <div id="cardType" class="card-type-display">Card Type: <strong>Unknown</strong></div>
+      <div class="form-row">
+        <input type="number" id="month" placeholder="Exp Month (MM)" min="1" max="12" required>
+        <input type="number" id="year" placeholder="Exp Year (YYYY)" min="2023" required>
+        <input type="number" id="cvv" placeholder="CVV" maxlength="4" required>
+      </div>
+      <button type="submit" class="btn-pay">Complete Payment</button>
+      <div class="success-message" id="successMsg">✅ Payment Successful! Redirecting...</div>
+    </form>
+  </section>
+
+  <section class="section login-section" id="login">
+    <div class="login-box">
+      <h2>👋 Welcome Back</h2>
+      <form id="loginForm">
+        <label for="login-email">Email Address</label>
+        <input type="email" id="login-email" placeholder="mail@example.com" required>
+        <label for="login-password">Password</label>
+        <input type="password" id="login-password" placeholder="••••••••" required>
+        <a href="/confirmation" class="btn primary-btn" style="width: 60%; text-align: center;">Signin Securely</a>
+      </form>
+    </div>
+  </section>
+
+  <!-- include the shared footer -->
+  <%- include('partials/footer') %>
+
+  <!-- static JS -->
+  <script src="/js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+[
+    { 
+        "src": "https://raw.githubusercontent.com/programmercloud/foodlover/main/img/menu-1.jpg", 
+        "alt": "Delicious Pizza" 
+    },
+    { 
+        "src": "https://raw.githubusercontent.com/programmercloud/foodlover/main/img/menu-2.jpg", 
+        "alt": "Crispy Fries" 
+    },
+    { 
+        "src": "https://raw.githubusercontent.com/programmercloud/foodlover/main/img/menu-3.jpg", 
+        "alt": "Aromatic Biryani" 
+    }
+]
