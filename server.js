@@ -8,8 +8,7 @@ const MongoStore = require('connect-mongo');
 
 const indexRouter = require('./routes/index');
 const apiRouter = require('./routes/api');
-const authRouter = require('./routes/auth'); // make sure this file exists (routes/auth.js)
-
+const authRouter = require('./routes/auth');
 const app = express();
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
@@ -40,16 +39,14 @@ app.use(session({
   store: MongoStore.create({
     mongoUrl: MONGO_URI,
     collectionName: 'sessions',
-    ttl: 14 * 24 * 60 * 60 // 14 days
+    ttl: 14 * 24 * 60 * 60 
   }),
   cookie: {
     httpOnly: true,
-    // secure: true, // enable when using HTTPS
     maxAge: 14 * 24 * 60 * 60 * 1000
   }
 }));
 
-// Make session user available to all EJS templates as `currentUser`
 app.use((req, res, next) => {
   res.locals.currentUser = req.session ? req.session.user : null;
   next();
