@@ -2,6 +2,7 @@
 An Online food ordering platform in which any one order food from nearest store.
 ##  Overview
 As our group of web development[Me, Krishan Kumar, Aniket Vaishya] It was our 1st Web Project.
+
 HungerHub is a beginner web project that allows users to select their liked food items,
 view restaurants, and place food orders online.
 
