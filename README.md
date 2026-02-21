@@ -1,24 +1,23 @@
 # HungerHub  
-An online food delivery web application inspired by Zomato & Swiggy.
-
+An Online food ordering platform in which any one order food from nearest store.
 ##  Overview
-HungerHub is a full-stack web project that allows users to browse food items,
+As our group of web development[Me, Krishan Kumar, Aniket Vaishya] It was our 1st Web Project.
+HungerHub is a beginner web project that allows users to select their liked food items,
 view restaurants, and place food orders online.
 
-This project is built to practice real-world web development workflows
-and industry-level GitHub practices.
-
-## Features
-- User-friendly food ordering interface
-- Restaurant and menu listing
-- Order placement functionality
-- Clean UI with responsive design
+This project is built to practice real-world web development workflows, inspired by blink in and zomato to save customer time and fullfill their demands
 
 ## Tech Stack
 - Frontend: HTML, CSS, JavaScript, EJS
 - Backend: Node.js, Express.js
 - Database: MongoDB
 - Version Control: Git & GitHub
+
+## Features
+- User-friendly food ordering interface
+- Restaurant and menu listing
+- Order placement functionality
+- Clean UI with responsive design
 
 ## 📂 Project Structure
 Web-Project/
@@ -44,5 +43,4 @@ Web-Project/
    `http://localhost:3000`
 
 ## 👨‍💻 Author
-Krishan Kumar  
-GitHub: https://github.com/krishan-14
+Aarav Chopra
